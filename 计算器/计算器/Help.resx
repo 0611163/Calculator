@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="treeView1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="richTextBox1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>支持的运算符：
++正号或加号：   
+格式：+a
+说明：正号
+格式：a+b
+说明：加号
+
+-负号或减号：
+格式：-a
+说明：负号
+格式：a-b
+说明：减号
+
+*乘：
+格式：a*b
+
+/除：
+格式：a/b
+
+Mod（或mod）取余：   
+格式：aModb
+说明：aModb表示a除以b的余数 
+
+^乘方：
+格式：a^b
+
+ln以e为底数的对数：
+格式：ln(x)
+
+log取对数：
+格式：log(x)
+说明：以10为底数的对数
+格式：log(x,n)
+说明：以n为底数的对数
+
+Exp（或exp）常数e的x次方：
+格式：Exp(x)
+
+sqrt开方：
+格式：sqrt(x)
+说明：开平方
+格式：sqrt(x,n)
+说明：开n次方，x不支持负数
+
+sin正弦：
+格式：sin(x) 
+说明：x的单位是弧度
+格式：sin(x度) 
+说明：x的单位是角度
+
+cos余弦：
+说明：格式同sin
+
+tan正切：
+说明：格式同sin
+
+asin反正弦：
+说明：格式同sin
+
+acos反余弦：
+说明：格式同sin
+
+atan反正切：
+说明：格式同sin
+
+sinh双曲正弦：
+说明：格式同sin
+
+cosh双曲余弦：
+说明：格式同sin
+
+tanh双曲正切：
+说明：格式同sin
+
+nCr（或ncr）组合：
+格式：nCr(n,m)
+说明：从n个不同元素中取出m个元素的一个组合，m≤n
+
+nAr（或nar）排列：
+格式：nAr(n,m)
+说明：从n个不同元素中取出m个元素的一个排列，m≤n
+
+n!阶乘：
+格式：n!
+说明：例9!
+
+%百分比：
+格式：x%
+说明：例78%
+
+度（角度转弧度）：
+格式：x度  
+说明：例sin(90度) 其中90度表示把角度90转换为弧度数 计算结果是1
+
+toDegree弧度转角度：
+格式：toDegree(x)
+
+BIN二进制转十进制：
+格式：xBIN
+说明：例1101101BIN
+
+OCT八进制转十制：
+格式：xOCT
+ 
+HEX十六进制转十进制：
+格式：xHEX
+     
+toB十进制转二进制： 
+格式：toB(x)
+说明：例toB(23)
+
+toO十进制转八进制：
+格式：toO(x)
+
+toH十进制转十六进制：
+格式：toH(x)
+
+avg求平均值： 
+格式：avg(x1,x2,x3,……)
+说明：参数个数不限，例avg(-9.2,-7.2*2,avg(7,-8.8,5),sin(pi))
+
+sum求和：
+格式：sum(x1,x2,x3,……)
+说明：参数个数不限，例sum(4,5,sqrt6,7)
+
+s样本标准方差：
+格式：s(x1,x2,x3,……)
+说明：参数个数不限，例：s(5,6,7,8,9)
+
+conv单位换算：
+格式：conv(待转换的单位,目标单位,x)
+说明：例conv(海里,公里,12) 表示把12海里转换成公里
+
+dms度分秒与小数形式相互转换：
+格式：dms(x)
+说明：小数形式转度分秒形式
+格式：dms(d,m,s)或dms(d,m)
+说明：度分秒形式转小数形式
+例：dms(30.33)表示小数形式转度分秒形式 dms(30,33,55)表示度分秒形式转小数形式
+
+and（或And）按位与：    
+格式：aAndb  
+例：89And76
+
+or（或Or）按位或：    
+格式：aOrb
+
+xor（或Xor）按位异或：    
+格式：aXorb
+
+not（或Not）按位取反：    
+格式：not(x)      
+例：not(9)
+
+sgn（或Sgn或Sign或sign）取数值的符号：   
+格式：Sgn(x)
+例：sgn(-8) 计算结果为-1
+
+int（或Int）取整：
+格式：Int(x)
+
+&lt;&lt;（或Lsh）按位左移：    
+格式：a&lt;&lt;b或aLshb 
+说明：将十进制数a按位左移，移动位数是b  
+例：35&lt;&lt;2 计算结果为140
+
+&gt;&gt;（或Rsh）按位右移：
+格式：a&gt;&gt;b或aRshb
+说明：将十进制数a按位右移，移动位数是b 
+    
+Abs（或abs）取绝对值：
+格式：Abs(x)
+
+Rnd随机数：
+格式：Rnd(min,max)
+说明：产生一个大于等于min并且小于等于max的随机32位带符号整数
+
+
+支持的常数：
+pi（或PI）圆周率：    
+例：只输入pi则显示pi的值 sin2pi+cos(2*pi)+sin(2pi)
+
+e自然常数：
+
+rnd随机数： 
+说明：产生一个大于等于0.0并且小于1.0的随机双精度浮点数
+例：rnd*9
+
+
+科学计数法：
+支持科学计算法输入
+例：-1.2E4*2.3E-3
+
+
+单位换算说明：
+例：conv(英里,公里,1) 输出结果为1英里 = 1.609 344公里
+单位换算后可以再参与运算：
+例：conv(英里,公里,1)*10输出结果为16.093 44
+
+
+变量存储：
+例：输入ax=-5即可存储变量ax为-5
+bx=9.8*9（等于号后面可以是算式）
+cx='你好'（把单引号中的字符串赋给变量）
+
+
+算式注释：
+例：45.6（长） * 56.7（宽） * 34.5（高）其中括号可以是中文全角字符或者英文全角字符
+例：45.6"长" * 56.7"宽" * 34.5"高" 其中双引号是英文双引号
+
+
+删除存储的变量或算式：
+右击变量菜单项或算式菜单项即可删除
+
+
+发音：
+两个选项对计算结果的读法不一样
+只选中第一个选项：例111读作一一一
+两个选项都选中：例111读作一百一十一
+
+
+进制运算：
+例：11011BIN*101110010BIN/101BIN（二进制数参与运算）
+例：EF99HEX*76FA0HEX（十六进制数参与运算）
+
+
+自定义函数：
+该功能用于定义新的函数，您可以定义该计算器没有的三角函数与双曲函数、进制转换函数、单位换算函数等，定义函数时，您可以在函数表达式以及函数参数列表的任意位置输入注释，注释规则和算式存储功能的注释规则相同
+
+自定义函数名称：函数名中不能含有小括号（中英文半角与全角括号）、双引号，可以含有逗号、大括号与中括号，若自定义函数的名称与原有函数相同，则按原有函数计算
+例：长方体的体积{长,宽,高}
+
+自定义函数描述：通常用于描述函数的功能，没有限制，也可以不填
+
+自定义函数表达式：函数表达式中的变量不能是已存在的变量，变量可以是汉字形式
+例：长*宽*高
+
+自定义函数的参数列表：函数表达式中存在的变量的列表，以英文逗号隔开，顺序不限，函数的参数变量字符串不能是函数表达式中的运算符字符串的子集，例：定义十六进制转八进制的函数，函数表达式为toO(XHEX)，使用该函数计算时会提示出错，因为运算符HEX中含有X，不防这样定义函数的表达式：toO(xHEX)
+例：长,宽,高
+
+函数类别：用于对函数进行分类管理
+
+自定义函数的使用：鼠标右键点击算式输入框会弹出输入菜单
+例：长方体的体积{长,宽,高}(10,9,3.5)计算结果为315
+
+自定义函数导入：
+功能-&gt;自定义函数，打开"函数存储与管理对话框"，右击最下面的函数列表框，选择“导入”菜单项，再选择“自定义函数库.dat”文件，双击或点击“打开”按钮即可导入
+
+搜索自定义函数：
+选择函数类别，输入关键字，将按照函数类别和关键字进行搜索
+关键字用于匹配函数名称、函数描述和参数列表
+
+
+自定义分段函数：
+格式：subfuns(左边界，右边界，表达式，左边界，右边界，表达式……)
+为了区别于普通函数，subfuns的参数的分隔符必须是中文逗号，如果该分段内左边界上的值不存在，则在左边界前面加'&gt;'号，如果该分段内右边界上的值不存在，则在右边界前面加'&lt;'号，如果左边界值为负无穷大，则可以用－1E308代替负无穷大，如果右边界值为正无穷大，则可以用1E308代替正无穷大，subfuns的参数必须三个为一组
+例：subfuns(-1E308，&lt;1，2*x，1，&lt;5，3*x，5，10，4*x，&gt;10，&lt;20，5*x，20，1E308，6*x)
+
+
+部分菜单说明：
+F-E  将计算结果在科学计数法和普通计数法之间切换
+( )  将整个表达式用括号括起来
+|←  将光标在表达式的开头和结尾之间切换
+
+
+运算符的优先级：
+运算符优先级由低到高依次为：and or xor &lt;&lt; &gt;&gt; 小于 +- 小于 */Mod 小于 ^ 小于 Exp sqrt ln log sin cos tan asin acos atan sinh cosh tanh nAr nCr toDegree avg sum s conv dms toB toO toH Not Int Sgn Abs 小于 !%度 小于 BIN OCT HEX
+
+
+撤销与恢复：
+按方向键'↑'撤销表达式输入框中的更改，按方向键'↓'恢复
+
+
+查看计算过的表达式：
+按'Ctrl'+'↑'或'Ctrl'+'↓'查看计算过的表达式
+
+
+软件注册：
+如果您觉得该计算器实用，想长期使用，请注册
+注册方法：
+1、点击菜单“帮助”-&gt;“注册”，打开“计算器注册”对话框，获取机器码
+2、把机器码发送到邮箱651029594@qq.com或su_xiang@126.com，索取注册码
+3、得到注册码后，重新打开“计算器注册”对话框，输入注册码，点击注册即可，注册后不会再有软件试用时间的限制
+
+
+其他说明：
+输入表达式后回车即可计算，按F4清除
+
++-号即可以当正负号使用也可以当加减号使用
+
+表达式中可以有空格，同时为了方便输入，括号和乘号可以适当地省略，若表达式有歧义或出错，应加上括号
+例：-9--3+5sin(2pi)
+
+可以同时计算多个表达式的值，例：(9+sin2pi)*-3,5*6,sum(2,3,4,5,6)输入的表达式用逗号隔开，计算结果为-27,30,20计算结果同样用逗号隔开
+
+右击表达式输入框，会弹出菜单，可以输入存储的变量、算式、函数等
+
+若发现BUG和不足或有好的建议可以发送至邮箱651029594@qq.com，感谢您的支持</value>
+  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAB
+        AAAAAAAA0aR0AOS7fQCSkY4AnJqYAKKhnwCjoqAApaSiAKempACop6UAqaimAKuqqACxr60AsrCvALi2
+        tQC6uLcAu7q4ALy7uQC+vbsAvr68AMutiwDPsZAAzrifANK2lwDXu50AyrupAMC/vQDXw6MA28GkAMDA
+        vgDgxqwA4cuzAOTLsgDmzrYA5tGyAMLCwADFxMIAxsbEAMnIxgDKysgAzMvKAM3NywDPzs4A0NHPANLS
+        0QDV1dMA1tbUANnZ1wDa2dgA3dzbAN3d3ADu4tYA4ODfAOLj4QDj5OMA5OXjAOXm5QDo5+YA6OjnAOrq
+        6QDs7ewA8fHwAPb29QD6+voA/v7+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAOBAQEBAQEBAQEBAQEDQAABDw5NjYxMS0tKSkpJAQAAAQ2CykH
+        JAcSBxIDAxIEAAAENj8LPwc/Bxo/PwMSBAAABDYLKQsSBxIHEgMDEgQAAAQ2Pws/Cz8HPwc/AyQEAAAE
+        PAskCSkHJAcSAwMkBAAABDw/Cz8LPwc/Bz8DKQQAAAQ+PDw2NjY2MS8tLSkEAAAEIgICAgICAgICAgIb
+        BAAABCABAQEBAQEBAQEBFgQAAAQzICAgIB4cGBcVFBkEAAAEPz8/Pj4+PDwxLSkpBAAAEgQEBAQEBAQE
+        BAQEBAwAAAAAAAAAAAAAAAAAAAAAAP//AACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAQAAgAEAAIABAACAAQAAgAEAAP//AAA=
+</value>
+  </data>
+</root>
