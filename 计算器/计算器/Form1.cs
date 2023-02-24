@@ -49,7 +49,7 @@ namespace 计算器
             font = txtExp.Font;
 
             //调整Form1的高度
-            this.Height -= 195;
+            this.Height -= 235;
 
             //设置文本框背景色
             txtExp.BackColor = Color.FromArgb(204, 232, 207);
@@ -600,8 +600,7 @@ namespace 计算器
         /// </summary>
         private void 注册ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegisterForm regForm = new RegisterForm();
-            regForm.ShowDialog(this);
+
         }
         #endregion
 
@@ -726,16 +725,16 @@ namespace 计算器
             if (this.科学型ToolStripMenuItem.Text == "科学型")
             {
                 this.科学型ToolStripMenuItem.Text = "标准型";
-                panel1.Location = new Point(panel1.Left, panel1.Top + 157);
-                panel2.Location = new Point(panel2.Left, panel2.Top - 245);
-                this.Height += 155;
+                panel1.Location = new Point(panel1.Left, panel1.Top + 195);
+                panel2.Location = new Point(panel2.Left, panel2.Top - 265);
+                this.Height += 195;
             }
             else
             {
                 this.科学型ToolStripMenuItem.Text = "科学型";
-                panel1.Location = new Point(panel1.Left, panel1.Top - 157);
-                panel2.Location = new Point(panel2.Left, panel2.Top + 245);
-                this.Height -= 155;
+                panel1.Location = new Point(panel1.Left, panel1.Top - 195);
+                panel2.Location = new Point(panel2.Left, panel2.Top + 265);
+                this.Height -= 195;
             }
         }
 

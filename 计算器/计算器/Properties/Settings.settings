@@ -14,14 +14,14 @@
     <Setting Name="strExps" Type="System.String" Scope="User">
       <Value Profile="(Default)">1+1</Value>
     </Setting>
-    <Setting Name="funList" Type="System.Collections.Specialized.StringCollection" Scope="User">
-      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;asinh|反双曲正弦|ln(X+sqrt(X*X+1))|X|三角函数与双曲函数&lt;/string&gt;
-&lt;/ArrayOfString&gt;</Value>
-    </Setting>
     <Setting Name="processId" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="funList" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;string&gt;asinh|反双曲正弦|ln(X+sqrt(X*X+1))|X|三角函数与双曲函数&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

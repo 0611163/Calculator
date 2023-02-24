@@ -907,56 +907,6 @@ namespace 计算器
         /// </summary>
         public static bool IsProgramPassValidate()
         {
-            try
-            {
-                //如果程序没有注册
-                if (!IsRegister())
-                {
-                    #region 判断程序第一次运行的标志是否存在
-                    if (!FirstRunFlagExists())//标志不存在
-                    {
-                        return false;
-                    }
-                    #endregion
-
-                    #region 判断用户有没有修改系统日期
-                    //获取最后一次运行的日期
-                    DateTime lastRunDate = Convert.ToDateTime(FileOperator.GetValue("LastRunDate"));
-                    DateTime lastRunDate2 = Convert.ToDateTime(DESEncrypt.Decrypt(RegisterOperator.GetRegData(DESEncrypt.Encrypt("LastRunDate", Common.DESKey)), Common.DESKey));
-                    if (!lastRunDate.Equals(lastRunDate2))
-                    {
-                        return false;
-                    }
-
-                    //如果当前日期早于程序最后一次运行的日期，说明用户修改了系统日期
-                    if (DateTime.Now.Date.CompareTo(lastRunDate) < 0)
-                    {
-                        //如果用户修改了系统日期，则回返false
-                        return false;
-                    }
-                    #endregion
-
-                    #region 判断有没有超过试用期
-                    //读取程序第一次运行的日期
-                    DateTime dtFirstRunDate = Convert.ToDateTime(FileOperator.GetValue("FirstRunDate"));
-                    DateTime dtFirstRunDate2 = Convert.ToDateTime(DESEncrypt.Decrypt(RegisterOperator.GetRegData(DESEncrypt.Encrypt("FirstRunDate", Common.DESKey)), Common.DESKey));
-                    if (!dtFirstRunDate.Equals(dtFirstRunDate2))
-                    {
-                        return false;
-                    }
-                    //如果超过试用日期
-                    if (DateTime.Now.Date.Subtract(dtFirstRunDate).Days > Common.probationalTime)
-                    {
-                        return false;
-                    }
-                    #endregion
-
-                }
-            }
-            catch
-            {
-                return false;
-            }
             return true;
         }
         #endregion
@@ -1019,7 +969,7 @@ namespace 计算器
         public static string CreateRegisterCodeFromMachineCode()
         {
             //获取本机机器码，对机器码加密
-            string str = DESEncrypt.Encrypt(HardwareInfoClass.GetMachineCode(), Common.DESKey);
+            string str = DESEncrypt.Encrypt("获取机器码的方法已删除", Common.DESKey);
             //计算其MD5值
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
             md5.ComputeHash(Encoding.Default.GetBytes(str));
@@ -1062,59 +1012,7 @@ namespace 计算器
         public static void MemorizeFirstRunFlag()
         {
 
-            #region 使用文件夹记录
-            //创建文件夹
-            string path = DESEncrypt.Decrypt("4C88E64EAF09C20619D20AFBDDB8DE3847C5EB972C6103A3C4C2B2B829CF0CFF", Common.DESKey);
-            Directory.CreateDirectory(path);
-            //创建子文件夹
-            string subPath = path + "\\" + "ã";
-            Directory.CreateDirectory(subPath);
-            //创建文件
-            string filePathName = subPath + "\\" + "abc.dat";
-            FileStream fileStream = File.Create(filePathName);
-            fileStream.Close();
-            fileStream.Dispose();
-            //写入文件
-            StreamWriter streamWriter = new StreamWriter(filePathName);
-            streamWriter.Write("abc");
-            streamWriter.Close();
-            streamWriter.Dispose();
-            //伪装文件属性
-            DateTime dt = DateTime.Now.AddYears(-3);
-            File.SetCreationTime(filePathName, dt);
-            File.SetLastAccessTime(filePathName, dt);
-            File.SetLastWriteTime(filePathName, dt);
-            //伪装子文件夹属性
-            dt = DateTime.Now.AddYears(-3);
-            Directory.SetCreationTime(subPath, dt);
-            Directory.SetLastAccessTime(subPath, dt);
-            Directory.SetLastWriteTime(subPath, dt);
-            //伪装文件夹属性
-            dt = DateTime.Now.AddYears(-3);
-            Directory.SetCreationTime(path, dt);
-            Directory.SetLastAccessTime(path, dt);
-            Directory.SetLastWriteTime(path, dt);
-            //隐藏子文件夹
-            DirectoryInfo dirInfo = new DirectoryInfo(subPath);
-            dirInfo.Attributes = FileAttributes.Hidden | FileAttributes.ReadOnly | FileAttributes.System | FileAttributes.Archive;
-            //隐藏文件夹
-            dirInfo = new DirectoryInfo(path);
-            dirInfo.Attributes = FileAttributes.Hidden | FileAttributes.ReadOnly | FileAttributes.System | FileAttributes.Archive;
-            //设置子文件夹权限
-            DirectorySecurity dirSecurity = Directory.GetAccessControl(subPath);
-            FileSystemAccessRule fsAccessRule = new FileSystemAccessRule("Everyone",
-                FileSystemRights.FullControl,
-                AccessControlType.Deny);
-            dirSecurity.SetAccessRule(fsAccessRule);
-            Directory.SetAccessControl(subPath, dirSecurity);
-            //设置文件夹权限
-            dirSecurity = Directory.GetAccessControl(path);
-            fsAccessRule = new FileSystemAccessRule("Everyone",
-              FileSystemRights.FullControl,
-              AccessControlType.Deny);
-            dirSecurity.SetAccessRule(fsAccessRule);
-            Directory.SetAccessControl(path, dirSecurity);
-            #endregion
+            //代码已删除
 
         }
         #endregion
@@ -1126,17 +1024,7 @@ namespace 计算器
         public static bool FirstRunFlagExists()
         {
 
-            #region 读取文件夹标志
-            string path = DESEncrypt.Decrypt("4C88E64EAF09C20619D20AFBDDB8DE3847C5EB972C6103A3C4C2B2B829CF0CFF", Common.DESKey);
-            if (Directory.Exists(path))//文件夹标志存在
-            {
-                return true;
-            }
-            else//文件夹标志不存在
-            {
-                return false;
-            }
-            #endregion
+            return true;
 
         }
         #endregion

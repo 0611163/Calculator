@@ -21,7 +21,7 @@ namespace 计算器
             try
             {
                 //获取本机的机器码
-                txtMachineCode.Text = HardwareInfoClass.GetMachineCode();
+                txtMachineCode.Text = string.Empty; //获取机器码的方法已删除
 
                 //判断程序有没有注册
                 if (Common.IsRegister())
