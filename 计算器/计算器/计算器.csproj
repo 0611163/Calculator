@@ -11,7 +11,17 @@
 		<Version>5.2.0.158</Version>
 		<Description>最后修改日期：\r\n2012年8月\r\n\r\n联系作者：\r\nQQ：651029594\r\n邮箱：651029594@qq.com\r\n或su_xiang@126.com</Description>
 		<Copyright>Copyright @ suxiang 2012</Copyright>
+		<PublishAot>true</PublishAot>
+		<_SuppressWinFormsTrimError>true</_SuppressWinFormsTrimError>
+		<CustomResourceTypesSupport>true</CustomResourceTypesSupport>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="WinFormsComInterop" Version="0.4.3" />
+		<PackageReference Include="WinFormsComInterop.SourceGenerator" Version="0.4.1" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="Properties\Settings.Designer.cs">
