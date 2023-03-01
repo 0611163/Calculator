@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace 计算器
@@ -255,11 +256,10 @@ namespace 计算器
         /// <summary>
         /// 计算结果发音
         /// </summary>
-        public void SpeechResult()
+        public async Task SpeechResult()
         {
             //等于号发音
-            Common.Speech("等于");
-            Thread.Sleep(900);
+            await Common.Speech("等于");
 
             double doubleResult;
             string strResult = txtResult.Text.Replace(" ", "");
@@ -280,7 +280,6 @@ namespace 计算器
             for (int i = 0; i < strResult.Length; i++)
             {
                 string tag = strResult[i].ToString();
-                int time = 400;
 
                 int a;
                 //是数字
@@ -289,58 +288,8 @@ namespace 计算器
                     tag = "_" + tag;
                 }
 
-                //判断字符
-                switch (tag)
-                {
-                    case "_0":
-                        time = 400;
-                        break;
-                    case "_1":
-                        time = 400;
-                        break;
-                    case "_2":
-                        time = 350;
-                        break;
-                    case "_3":
-                        time = 400;
-                        break;
-                    case "_4":
-                        time = 400;
-                        break;
-                    case "_5":
-                        time = 450;
-                        break;
-                    case "_6":
-                        time = 350;
-                        break;
-                    case "_7":
-                        time = 400;
-                        break;
-                    case "_8":
-                        time = 400;
-                        break;
-                    case "_9":
-                        time = 450;
-                        break;
-                    case ".":
-                        tag = "点";
-                        time = 400;
-                        break;
-                    case "-":
-                        tag = "负";
-                        time = 400;
-                        break;
-                    case " ":
-                        time = 1;
-                        break;
-                    default:
-                        break;
-
-                }
-
                 //发音
-                Common.Speech(tag);
-                Thread.Sleep(time);
+                await Common.Speech(tag);
             }//end for
         }
         #endregion

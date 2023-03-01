@@ -16,6 +16,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tool;
 
@@ -282,16 +283,14 @@ namespace 计算器
         /// 发音
         /// </summary>
         /// <param name="tag">标识</param>
-        public static void Speech(string tag)
+        public static async Task Speech(string tag)
         {
             if (tag == "")
             {
                 return;
             }
-            System.Threading.Thread thread
-                = new System.Threading.Thread(
-                    new System.Threading.ParameterizedThreadStart(Play));
-            thread.Start(tag);
+
+            await Task.Run(() => Play(tag));
         }
         public static void Play(object tag)
         {
@@ -299,7 +298,7 @@ namespace 计算器
             {
                 System.IO.Stream stream = Properties.Resources.ResourceManager.GetStream(tag.ToString());
                 System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(stream);
-                soundPlayer.Play();
+                soundPlayer.PlaySync();
             }
             catch { }
         }
