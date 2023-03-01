@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace 计算器
@@ -22,7 +23,6 @@ namespace 计算器
         private CalResult result;
         public static Font font;
         private bool isScientificShow = false;
-        private System.Threading.Thread speechResultThread;
         private bool isKeyDown = false;
         public static bool refreshRichTextBoxContextMenu = false;
         private AddFun addFun = null;
@@ -118,11 +118,6 @@ namespace 计算器
                 if (this.语音ToolStripMenuItem1.Checked)
                 {
                     //中止之前的计算结果发音
-                    if (this.speechResultThread != null)
-                    {
-                        this.speechResultThread.Abort();
-                        this.speechResultThread = null;
-                    }
                 }
 
                 if (txtExp.Text.IndexOf("=") != -1)//存储变量
@@ -139,8 +134,7 @@ namespace 计算器
                     if (this.语音ToolStripMenuItem1.Checked)
                     {
                         //起动线程发音
-                        speechResultThread = new System.Threading.Thread(new System.Threading.ThreadStart(SpeechResult));
-                        speechResultThread.Start();
+                        Task.Run(() => SpeechResult());
                     }
                 }
                 txtExp.Focus();
@@ -378,11 +372,6 @@ namespace 计算器
                 if (this.语音ToolStripMenuItem1.Checked)
                 {
                     //中止计算结果发音
-                    if (this.speechResultThread != null)
-                    {
-                        this.speechResultThread.Abort();
-                        this.speechResultThread = null;
-                    }
 
                     if (this.isKeyDown)
                     {
@@ -858,11 +847,6 @@ namespace 计算器
                     string[] tagList = ((Control)sender).Tag.ToString().Split('|');
 
                     //中止计算结果发音
-                    if (this.speechResultThread != null)
-                    {
-                        this.speechResultThread.Abort();
-                        this.speechResultThread = null;
-                    }
 
                     //存在发音标识则发音
                     if (tagList.Length == 2)
@@ -1418,12 +1402,6 @@ namespace 计算器
             if (e.Button == MouseButtons.Left)
             {
                 //中止计算结果发音
-                if (this.speechResultThread != null)
-                {
-                    //中止线程
-                    this.speechResultThread.Abort();
-                    this.speechResultThread = null;
-                }
                 this.Close();
                 this.Dispose();
             }
@@ -1452,12 +1430,6 @@ namespace 计算器
                 Properties.Settings.Default.Save();
 
                 //中止计算结果发音
-                if (this.speechResultThread != null)
-                {
-                    //中止线程
-                    this.speechResultThread.Abort();
-                    this.speechResultThread = null;
-                }
             }
             else
             {
