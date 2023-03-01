@@ -549,10 +549,7 @@ namespace 计算器
             }
             else if (numList.Count == 2)
             {
-                //转换成整数再运算，结果再转换成小数
-                int decimalLength = GetDecimalLength(numList[0].DoubleValue, numList[1].DoubleValue);
-                result = new CalNum((numList[0].DoubleValue * Math.Pow(10, decimalLength) + numList[1].DoubleValue * Math.Pow(10, decimalLength))
-                    / Math.Pow(10, decimalLength));
+                result = new CalNum((double)decimal.Add((decimal)numList[0].DoubleValue, (decimal)numList[1].DoubleValue));
             }
             else
             {
@@ -575,10 +572,7 @@ namespace 计算器
             }
             else if (numList.Count == 2)
             {
-                //转换成整数再运算，结果再转换成小数
-                int decimalLength = GetDecimalLength(numList[0].DoubleValue, numList[1].DoubleValue);
-                result = new CalNum((numList[0].DoubleValue * Math.Pow(10, decimalLength) - numList[1].DoubleValue * Math.Pow(10, decimalLength))
-                    / Math.Pow(10, decimalLength));
+                result = new CalNum((double)decimal.Add((decimal)numList[0].DoubleValue, -(decimal)numList[1].DoubleValue));
             }
             else
             {
