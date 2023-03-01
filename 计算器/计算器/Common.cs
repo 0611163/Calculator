@@ -296,9 +296,13 @@ namespace 计算器
         {
             try
             {
-                System.IO.Stream stream = Properties.Resources.ResourceManager.GetStream(tag.ToString());
-                System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(stream);
-                soundPlayer.PlaySync();
+                using (Stream stream = Properties.Resources.ResourceManager.GetStream(tag.ToString()))
+                {
+                    using (System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(stream))
+                    {
+                        soundPlayer.PlaySync();
+                    }
+                }
             }
             catch { }
         }
