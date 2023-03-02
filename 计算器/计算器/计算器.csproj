@@ -6,10 +6,10 @@
 		<Nullable>disable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<AssemblyVersion>5.2.0.158</AssemblyVersion>
-		<FileVersion>5.2.0.158</FileVersion>
-		<Version>5.2.0.158</Version>
-		<Description>最后修改日期：\r\n2012年8月\r\n\r\n联系作者：\r\nQQ：651029594\r\n邮箱：651029594@qq.com\r\n或su_xiang@126.com</Description>
+		<AssemblyVersion>5.2.0.162</AssemblyVersion>
+		<FileVersion>5.2.0.162</FileVersion>
+		<Version>5.2.0.162</Version>
+		<Description>最后修改日期：\r\n2013年2月\r\n\r\n联系作者：\r\nQQ：651029594\r\n邮箱：651029594@qq.com\r\n或su_xiang@126.com</Description>
 		<Copyright>Copyright @ suxiang 2012</Copyright>
 		<PublishAot>true</PublishAot>
 		<_SuppressWinFormsTrimError>true</_SuppressWinFormsTrimError>
