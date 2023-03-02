@@ -8,6 +8,7 @@
 //3、算式注释功能
 /////////////////////////////////////////////////////////////////
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Drawing;
@@ -279,6 +280,14 @@ namespace 计算器
         #endregion
 
         #region 发音
+        public static async Task Speech(ConcurrentQueue<string> tagList)
+        {
+            while (tagList.TryDequeue(out string tag))
+            {
+                await Speech(tag);
+            }
+        }
+
         /// <summary>
         /// 发音
         /// </summary>
@@ -292,6 +301,7 @@ namespace 计算器
 
             await Task.Run(() => Play(tag));
         }
+
         public static void Play(object tag)
         {
             try

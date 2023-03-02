@@ -2,6 +2,7 @@
 //说明：请谨慎修改
 /////////////////////////////////////////////////
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -36,6 +37,7 @@ namespace 计算器
         private List<string> memoryExprs_Cal = new List<string>();
         private int memoryExprsCursor_Cal = -1;
         private int memoryExprsMaxCount_Cal = 100;
+        private ConcurrentQueue<string> tagList = new ConcurrentQueue<string>(); //计算结果读音
         #endregion
 
         public Form1()
@@ -96,7 +98,7 @@ namespace 计算器
         /// <summary>
         /// 等于
         /// </summary>
-        private void btnEqual_Click(object sender, EventArgs e)
+        private async void btnEqual_Click(object sender, EventArgs e)
         {
             //判断程序能否继续使用
             if (!Common.IsProgramPassValidate())
@@ -134,7 +136,7 @@ namespace 计算器
                     if (this.语音ToolStripMenuItem1.Checked)
                     {
                         //起动线程发音
-                        Task.Run(() => SpeechResult());
+                        await SpeechResult();
                     }
                 }
                 txtExp.Focus();
@@ -258,8 +260,10 @@ namespace 计算器
         /// </summary>
         public async Task SpeechResult()
         {
+            while (tagList.TryDequeue(out _)) { }
+
             //等于号发音
-            await Common.Speech("等于");
+            tagList.Enqueue("等于");
 
             double doubleResult;
             string strResult = txtResult.Text.Replace(" ", "");
@@ -289,8 +293,10 @@ namespace 计算器
                 }
 
                 //发音
-                await Common.Speech(tag);
+                tagList.Enqueue(tag);
             }//end for
+
+            await Common.Speech(tagList);
         }
         #endregion
 
@@ -298,7 +304,7 @@ namespace 计算器
         /// <summary>
         /// txtExp文本框事件
         /// </summary>
-        private void txtExp_TextChanged(object sender, EventArgs e)
+        private async void txtExp_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -362,7 +368,7 @@ namespace 计算器
                                 tag = "除以";
                                 break;
                         }
-                        Common.Speech(tag);
+                        await Common.Speech(tag);
                         this.isKeyDown = false;
                     }
                 }
@@ -740,19 +746,19 @@ namespace 计算器
         /// <summary>
         /// 为panel1中的控件添加Click事件
         /// </summary>
-        private void panel1Controls_Click(object sender, EventArgs e)
+        private async void panel1Controls_Click(object sender, EventArgs e)
         {
             InputOpe(sender);
-            AddSpeech(sender);
+            await AddSpeech(sender);
         }
 
         /// <summary>
         /// 为panel2中的控件添加Click事件
         /// </summary>
-        private void panel2Controls_Click(object sender, EventArgs e)
+        private async void panel2Controls_Click(object sender, EventArgs e)
         {
             InputOpe(sender);
-            AddSpeech(sender);
+            await AddSpeech(sender);
         }
 
         /// <summary>
@@ -786,7 +792,7 @@ namespace 计算器
         /// <summary>
         /// 添加按键发音
         /// </summary>
-        private void AddSpeech(object sender)
+        private async Task AddSpeech(object sender)
         {
             try
             {
@@ -802,11 +808,11 @@ namespace 计算器
                         //是负号
                         if (Common.isSubtractive(txtExp.Text, tagList[0], txtExp.SelectionStart))
                         {
-                            Common.Speech("负");
+                            await Common.Speech("负");
                         }
                         else//不是负号
                         {
-                            Common.Speech(tagList[1]);
+                            await Common.Speech(tagList[1]);
                         }
                     }
                 }

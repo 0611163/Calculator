@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些属性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("计算器")]
-[assembly: AssemblyDescription("最后修改日期：\r\n2012年8月\r\n\r\n联系作者：\r\nQQ：651029594\r\n邮箱：651029594@qq.com\r\n或su_xiang@126.com")]
+[assembly: AssemblyDescription("最后修改日期：\r\n2023年3月\r\n\r\n联系作者：\r\nQQ：651029594\r\n邮箱：651029594@qq.com\r\n或su_xiang@126.com")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("计算器")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有这些值，也可以使用“内部版本号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.2.0.158")]
-[assembly: AssemblyFileVersion("5.2.0.158")]
+[assembly: AssemblyVersion("5.2.0.162")]
+[assembly: AssemblyFileVersion("5.2.0.162")]
