@@ -98,7 +98,7 @@ namespace 计算器
         /// <summary>
         /// 等于
         /// </summary>
-        private async void btnEqual_Click(object sender, EventArgs e)
+        private void btnEqual_Click(object sender, EventArgs e)
         {
             //判断程序能否继续使用
             if (!Common.IsProgramPassValidate())
@@ -136,7 +136,7 @@ namespace 计算器
                     if (this.语音ToolStripMenuItem1.Checked)
                     {
                         //起动线程发音
-                        await SpeechResult();
+                        Task.Run(() => SpeechResult());
                     }
                 }
                 txtExp.Focus();
