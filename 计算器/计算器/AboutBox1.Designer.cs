@@ -51,7 +51,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 12);
             this.label1.TabIndex = 26;
-            this.label1.Text = "版本：5.2.0.158";
+            this.label1.Text = "版本：5.2.0.162";
             // 
             // label2
             // 
@@ -60,7 +60,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 12);
             this.label2.TabIndex = 27;
-            this.label2.Text = "最后修改日期：2012年8月";
+            this.label2.Text = "最后修改日期：2023年3月";
             // 
             // label3
             // 
