@@ -122,7 +122,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.注册ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.科学型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.科学计数法ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -392,6 +391,7 @@
             // txtSearchKey
             // 
             this.txtSearchKey.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearchKey.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.txtSearchKey.Name = "txtSearchKey";
             this.txtSearchKey.Size = new System.Drawing.Size(121, 23);
             this.txtSearchKey.ToolTipText = "请输入搜索关键字";
@@ -1168,7 +1168,6 @@
             // 
             this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.帮助ToolStripMenuItem1,
-            this.注册ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
@@ -1177,21 +1176,14 @@
             // 帮助ToolStripMenuItem1
             // 
             this.帮助ToolStripMenuItem1.Name = "帮助ToolStripMenuItem1";
-            this.帮助ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.帮助ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.帮助ToolStripMenuItem1.Text = "帮助";
             this.帮助ToolStripMenuItem1.Click += new System.EventHandler(this.帮助ToolStripMenuItem1_Click);
-            // 
-            // 注册ToolStripMenuItem
-            // 
-            this.注册ToolStripMenuItem.Name = "注册ToolStripMenuItem";
-            this.注册ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.注册ToolStripMenuItem.Text = "注册";
-            this.注册ToolStripMenuItem.Click += new System.EventHandler(this.注册ToolStripMenuItem_Click);
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -1897,7 +1889,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripTextBox txtSearchKey;
         private System.Windows.Forms.ToolStripComboBox cmbFunSort;
-        private System.Windows.Forms.ToolStripMenuItem 注册ToolStripMenuItem;
     }
 }
 

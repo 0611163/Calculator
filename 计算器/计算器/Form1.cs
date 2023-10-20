@@ -100,21 +100,6 @@ namespace 计算器
         /// </summary>
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            //判断程序能否继续使用
-            if (!Common.IsProgramPassValidate())
-            {
-                try
-                {
-                    RegisterForm regForm = new RegisterForm();
-                    regForm.ShowDialog(this);
-                    return;
-                }
-                catch
-                {
-                    return;
-                }
-            }
-
             try
             {
                 if (this.语音ToolStripMenuItem1.Checked)
@@ -510,41 +495,15 @@ namespace 计算器
         /// </summary>
         private void 存储函数ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //判断程序能否继续使用
-            if (Common.IsProgramPassValidate())
+            if (addFun == null || addFun.IsDisposed)
             {
-                if (addFun == null || addFun.IsDisposed)
-                {
-                    addFun = new AddFun();
-                    addFun.Show();
-                }
-                else
-                {
-                    addFun.Focus();
-                }
+                addFun = new AddFun();
+                addFun.Show();
             }
             else
             {
-                try
-                {
-                    RegisterForm regForm = new RegisterForm();
-                    regForm.ShowDialog(this);
-                    return;
-                }
-                catch
-                {
-                    return;
-                }
+                addFun.Focus();
             }
-        }
-
-        /// <summary>
-        /// 注册
-        /// </summary>
-        private void 注册ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RegisterForm regForm = new RegisterForm();
-            regForm.ShowDialog(this);
         }
         #endregion
 
